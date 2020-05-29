@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HSESummerSchoolTest</string>
+
+    <string name="ruble">Рубль</string>
+    <string name="euro">Евро</string>
+    <string name="pound">Фунт</string>
+    <string name="hryvnia">Гривна</string>
+    <string name="dollar">Доллар</string>
+
+</resources>
