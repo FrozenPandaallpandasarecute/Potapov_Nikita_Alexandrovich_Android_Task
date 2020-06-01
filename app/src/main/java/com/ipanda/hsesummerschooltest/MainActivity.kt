@@ -70,13 +70,10 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                 start: Int,
                 count: Int,
                 after: Int
-            ) {
-                textView.setTextColor(resources.getColor(R.color.grey))
-            }
+            ) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (editText.text.isEmpty()) {
-
                     textView.text = "Сумма не введена"
                 } else {
                     textView.setTextColor(resources.getColor(R.color.black))
