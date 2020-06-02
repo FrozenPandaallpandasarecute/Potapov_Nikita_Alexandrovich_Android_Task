@@ -41,9 +41,8 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         spinner1.adapter = adapter
         spinner2.adapter = adapter
 
-        spinner1.setOnItemSelectedListener(this@MainActivity)
-        spinner2.setOnItemSelectedListener(this@MainActivity)
-
+        spinner1.onItemSelectedListener = this@MainActivity
+        spinner2.onItemSelectedListener = this@MainActivity
 
         textChanged()
     }
@@ -75,6 +74,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (editText.text.isEmpty()) {
                     textView.text = "Сумма не введена"
+                    textView.setTextColor(resources.getColor(R.color.grey))
                 } else {
                     textView.setTextColor(resources.getColor(R.color.black))
                     textView.text = (editText.text.toString()
@@ -85,4 +85,3 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         })
     }
 }
-
